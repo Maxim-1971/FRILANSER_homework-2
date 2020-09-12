@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>УРОК №2</title>
+</head>
+
+<body>
+	<header>
+		<img src="img/maxresdefault.jpg" width="50%" alt="Emmet">
+		<nav class="links">
+			<ul>
+				<li>
+					<a href="#one" class="link">
+						<h4 class="title-link">Блок свёрстанный "на UL-списках"</h4>
+					</a>
+				</li>
+				<li>
+					<a href="#two" class="link">
+						<h4 class="title-link">Блок свёрстанный "на DIVax"</h4>
+					</a>
+				</li>
+				<li>
+					<a href="#three" class="link">
+						<h4 class="title-link">Блок свёрстанный "на UL-списках и DIVax"</h4>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<hr>
+		<p>Чтобы не быть заподозренным в <mark><u><b>клавиатурa</b>фобии</u></mark>, сообщаю, что для форматирования кода под
+			амперсанды
+			использовалось приложение</p>
+		<a href="https://www.freeformatter.com/html-escape.html#ad-output">HTML Escape</a>
+		<p>раздобытое на веб-сайте</p>
+		<a href="https://www.freeformatter.com/">FREEFORMATTER.COM</a>
+	</header>
+	<hr>
+	<hr>
+	<hr>
+
+	<main>
+		<center>
+			<h1>syntax for EMMET</h1>
+		</center>
+		<hr>
+
+		<div id="one" class="one">
+			<ul>
+				<li>
+					<h2>Child: &gt;</h2>
+					<ul>
+						<li>
+							<h3>nav&gt;ul&gt;li</h3>
+						</li>
+						<li>
+							<pre>
+	&lt;nav&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+							</pre>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h2>Sibling: +</h2>
+					<ul>
+						<li>
+							<h3>div+p+bq</h3>
+						</li>
+						<li>
+							<pre>
+	&lt;div&gt;&lt;/div&gt;
+	&lt;p&gt;&lt;/p&gt;
+	&lt;blockquote&gt;&lt;/blockquote&gt;
+						</pre>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h2>Climb-up: ^</h2>
+					<ul>
+						<li>
+							<h3>div+div&gt;p&gt;span+em^bq</h3>
+						</li>
+						<li>
+							<pre>
+	&lt;div&gt;&lt;/div&gt;
+	&lt;div&gt;
+		&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;
+		&lt;blockquote&gt;&lt;/blockquote&gt;
+	&lt;/div&gt;
+							</pre>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h3>div+div&gt;p&gt;span+em^^bq</h3>
+						</li>
+						<li>
+							<pre>
+	&lt;div&gt;&lt;/div&gt;
+	&lt;div&gt;
+		&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;blockquote&gt;&lt;/blockquote&gt;
+							</pre>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h2>Grouping: ()</h2>
+					<ul>
+						<li>
+							<h3>div&gt;(header&gt;ul&gt;li*2&gt;a)+footer&gt;p</h3>
+						</li>
+						<li>
+							<pre>
+	&lt;div&gt;
+		&lt;header&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/header&gt;
+		&lt;footer&gt;
+			&lt;p&gt;&lt;/p&gt;
+		&lt;/footer&gt;
+	&lt;/div&gt;
+							</pre>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h3>(div&gt;dl&gt;(dt+dd)*3)+footer&gt;p</h3>
+						</li>
+						<li>
+							<pre>
+	&lt;div&gt;
+	&lt;dl&gt;
+		&lt;dt&gt;&lt;/dt&gt;
+		&lt;dd&gt;&lt;/dd&gt;
+		&lt;dt&gt;&lt;/dt&gt;
+		&lt;dd&gt;&lt;/dd&gt;
+		&lt;dt&gt;&lt;/dt&gt;
+		&lt;dd&gt;&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;/div&gt;
+	&lt;footer&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/footer&gt;
+							</pre>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h2>Multiplication: *</h2>
+					<ul>
+						<li>
+							<h3>ul&gt;li*5</h3>
+						</li>
+						<li>
+							<pre>
+	&lt;ul&gt;
+		&lt;li&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+							</pre>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<a href="#" title="Вернуться к началу">^Наверх</a>
+		<hr>
+
+		<div id="two" class="two">
+			<h2>Item numbering: $</h2>
+
+			<div class="content">
+				<h3>ul&gt;li.item$*5</h3>
+				<p class="result">
+					<pre>
+&lt;ul&gt;
+	&lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;							
+					</pre>
+				</p>
+			</div>
+
+			<div class="content">
+				<h3 class="ent">h$[title=item$]{Header $}*3</h3>
+				<p class="result">
+					<pre>
+&lt;h1 title=&quot;item1&quot;&gt;Header 1&lt;/h1&gt;
+&lt;h2 title=&quot;item2&quot;&gt;Header 2&lt;/h2&gt;
+&lt;h3 title=&quot;item3&quot;&gt;Header 3&lt;/h3&gt;
+					</pre>
+				</p>
+			</div>
+
+			<div class="content">
+				<h3 class="ent">ul&gt;li.item$$$*5</h3>
+				<p class="result">
+					<pre>
+&lt;ul&gt;
+	&lt;li class=&quot;item001&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item002&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item003&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item004&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item005&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+					</pre>
+				</p>
+			</div>
+
+			<div class="content">
+				<h3 class="ent">ul&gt;li.item$@-*5</h3>
+				<p class="result">
+					<pre>
+&lt;ul&gt;
+	&lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+					</pre>
+				</p>
+			</div>
+
+			<div class="content">
+				<h3 class="ent">ul&gt;li.item$@3*5</h3>
+				<p class="result">
+					<pre>
+&lt;ul&gt;
+	&lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item6&quot;&gt;&lt;/li&gt;
+	&lt;li class=&quot;item7&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+					</pre>
+				</p>
+			</div>
+		</div>
+		<a href="#" title="Вернуться к началу">^Наверх</a>
+		<hr>
+
+		<div id="three" class="three">
+			<div class="three_1">
+				<h2>ID and CLASS attributes</h2>
+				<ul>
+					<li>
+						<div class="content">
+							<h3>#header</h3>
+							<p class="result">
+								<pre>
+&lt;div id=&quot;header&quot;&gt;&lt;/div&gt;
+								</pre>
+							</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="content">
+							<h3>.title</h3>
+							<p class="result">
+								<pre>
+&lt;div class=&quot;title&quot;&gt;&lt;/div&gt;
+								</pre>
+							</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="content">
+							<h3>form#search.wide</h3>
+							<p class="result">
+								<pre>
+&lt;form id=&quot;search&quot; class=&quot;wide&quot;&gt;&lt;/form&gt;
+								</pre>
+							</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="content">
+							<h3>p.class1.class2.class3</h3>
+							<p class="result">
+								<pre>
+&lt;p class=&quot;class1 class2 class3&quot;&gt;&lt;/p&gt;
+								</pre>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="three_2">
+				<h2>Custom attributes</h2>
+				<ul>
+					<li>
+						<div class="content">
+							<h3>p[title=&quot;Hello world&quot;]</h3>
+							<p class="result">
+								<pre>
+&lt;p title=&quot;Hello world&quot;&gt;&lt;/p&gt;
+								</pre>
+							</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="content">
+							<h3>td[rowspan=2 colspan=3 title]</h3>
+							<p class="result">
+								<pre>
+&lt;td rowspan=&quot;2&quot; colspan=&quot;3&quot; title=&quot;&quot;&gt;&lt;/td&gt;
+								</pre>
+							</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="content">
+							<h3>[a='value1' b=&quot;value2&quot;]</h3>
+							<p class="result">
+								<pre>
+&lt;div a=&quot;value1&quot; b=&quot;value2&quot;&gt;&lt;/div&gt;
+								</pre>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="three_3">
+				<h2>Text: {}</h2>
+				<ul>
+					<li>
+						<div class="content">
+							<h3>a{Click me}</h3>
+							<p class="result">
+								<pre>
+&lt;a href=&quot;&quot;&gt;Click me&lt;/a&gt;
+								</pre>
+							</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="content">
+							<h3>p&gt;{Click }+a{here}+{ to continue}</h3>
+							<p class="result">
+								<pre>
+
+&lt;p&gt;Click &lt;a href=&quot;&quot;&gt;here&lt;/a&gt; to continue&lt;/p&gt;
+								</pre>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="three_4">
+				<h2>Implicit tag names</h2>
+				<ul>
+					<li>
+						<div class="content">
+							<h3>.class</h3>
+							<p class="result">
+								<pre>
+&lt;div class=&quot;class&quot;&gt;&lt;/div&gt;
+								</pre>
+							</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="content">
+							<h3>em&gt;.class</h3>
+							<p class="result">
+								<pre>
+&lt;em&gt;&lt;span class=&quot;class&quot;&gt;&lt;/span&gt;&lt;/em&gt;
+								</pre>
+							</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="content">
+							<h3>ul&gt;.class</h3>
+							<p class="result">
+								<pre>
+&lt;ul&gt;
+	&lt;li class=&quot;class&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+								</pre>
+							</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="content">
+							<h3>table&gt;.row&gt;.col</h3>
+							<p class="result">
+								<pre>
+&lt;table&gt;
+	&lt;tr class=&quot;row&quot;&gt;
+		&lt;td class=&quot;col&quot;&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+								</pre>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<a href="#" title="Вернуться к началу">^Наверх</a>
+		<hr>
+	</main>
+
+	<footer>
+		<p><strong>СОБСТВЕННЫЙ ВЫВОД:</strong> Проще верстать по <mark>третьему варианту</mark>, и на экране, если не использовать CSS, красивше
+			получается</p>
+		<hr>
+		<p><strong>P.S.</strong> Для себя выбрал такой формат обучения, <em>потому-что глаз сразу прилип к первому попавшемуся под руку
+				контенту</em>
+			предложенному к изучению.</p>
+		<hr>
+		<P>Про невалидность использования тегов &lt;width&gt; и &lt;center&gt; <mark>мне известно</mark>, <b>но пока</b> <cite>красота требует
+				жертв</сite>
+		</P>
+	</footer>
+
+</body>
+
+</html>
